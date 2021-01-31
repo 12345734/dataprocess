@@ -1,0 +1,18 @@
+import pandas as pd
+data = {"姓名":['张飞','关羽','刘备','典韦','许褚',],"语文":[68,95,98,90,80],"数学":[65,76,86,88,90],"英语":[30,98,88,77,90]}
+f=pd.DataFrame(data)
+print(f)
+f1=f[['语文','数学','英语']].mean()
+print(f1)
+f2=f[['语文','数学','英语']].max()
+print(f2)
+f3=f[['语文','数学','英语']].min()
+print(f3)
+f4=f[['语文','数学','英语']].var()
+print(f4)
+f5=f[['语文','数学','英语']].std()
+print(f5)
+f['sum']=f.sum(axis=1)
+print(f)
+m=f.sort_values(by='sum')
+print(m)
